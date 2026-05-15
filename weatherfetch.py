@@ -14,4 +14,13 @@ url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}
  
 response = urllib.request.urlopen(url)
 data = json.loads(response.read())
+table.put_item(
+        Item={
+            'city': city,
+            'temperature': str(data['main']['temp']),
+            'weather': data['weather'][0]['description'],
+            'timestamp': datetime.now().isoformat()
+        }
+    )
+
 
