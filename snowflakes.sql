@@ -6,3 +6,11 @@ USE SCHEMA weather1_schema;
 
 CREATE OR REPLACE FILE FORMAT weather_json
 TYPE = JSON;
+
+CREATE OR REPLACE STAGE my_stage
+URL = 's3://weath-erbucket/'
+CREDENTIALS = (
+    AWS_KEY_ID = 'your_access_key',
+    AWS_SECRET_KEY = 'your_secret_key'
+)
+FILE_FORMAT = weather_json;
