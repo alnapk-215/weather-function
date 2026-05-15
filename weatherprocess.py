@@ -8,3 +8,6 @@ BUCKET_NAME = 'weath-erbucket'
 def lambda_handler(event, context):
 
     print(event)
+    for record in event['Records']:
+
+        new_image = record['dynamodb'].get('NewImage', {})
