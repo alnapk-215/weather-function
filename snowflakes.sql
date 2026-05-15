@@ -14,3 +14,5 @@ CREDENTIALS = (
     AWS_SECRET_KEY = 'your_secret_key'
 )
 FILE_FORMAT = weather_json;
+
+LIST @my_stage;
