@@ -4,4 +4,4 @@ from datetime import datetime
 
 s3 = boto3.client('s3')
 
-BUCKET_NAME = 'weather-lamb-project1'
+BUCKET_NAME = 'weath-erbucket'
