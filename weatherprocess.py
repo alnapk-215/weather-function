@@ -22,3 +22,4 @@ def lambda_handler(event, context):
              Key=file_name,
              Body=json.dumps(data, indent=4)
         )
+        print(response)
