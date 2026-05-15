@@ -21,6 +21,8 @@ table.put_item(
             'weather': data['weather'][0]['description'],
             'timestamp': datetime.now().isoformat()
         }
-    )
-
-
+    )   
+     return {
+        'statusCode': 200,
+        'body': json.dumps('Weather data inserted')
+    }
